@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background: #eed3d9;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4.5rem;
+  line-height: 1;
+  margin: 2rem 0 0 0;
+  color: #ff7660;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #3b1010;
+  margin: 2rem;
+}
+
+.score {
+  background: #e4e869;
+  padding: 0 3rem;
+  line-height: 1;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  color: #3b1010;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAdVBMVEUAAAD////8/Pzp6elcXFzU1NTv7++jo6OZmZnJycm8vLz19fXBwcFgYGDNzc3h4eF1dXWQkJC1tbWmpqZSUlKxsbHb29tpaWlLS0sLCws+Pj4mJiaCgoJ2dnaJiYmFhYU0NDQeHh5FRUUsLCwTExM2NjYXFxfkYvrjAAAG+UlEQVR4nO2d6XqrIBBArfsW12xtszW5t+//iLdN06uJqCwDA8bzu1/DnASFYQDrZUYAC7sBbZJ1VJe7YuEuNvtdsMp87AaNoou+vDosrS5usMZu2SA66MvrBcHcf4rIxm5hL+j6vMPHkLsflkGO3U4yuPqc8nXc3Y1NrWE/xtQXb6nd3diWqYPY4C5o+uyA/od3z2lzDIO6ijzHR38oIumzS053j7ye3X0ZxJ6DYxJFH5i8O5HbfRivE7WRYOgLJchr2BZBpOwBqV5fIFXeL5dNGefyO7RqfTHvC4OL94XkV7Vafd6bSnm/LANpClXq8wfnZlK5hHLSDwr1yX1jjLKNJcSkTJ9HMbWVTQneiRXpswtsdT8sgOfNavSl2NoaFqADayX6NtjO7kgBI1Ogb/0HW9gDO7jY5OtTM8tgYgkWnHR9enXcGyeo6ZxkfTbKNGOcC1B8cvUlSme4LGxhApSqT197lhWARChV319sR0OAjP9k6quwDQ1yhAhRpj5S2YBGQLx9JepzsP2MAPH0k6hP8x+f9Q4Qozx9O2w9owAUfkjTt8eWM04oHqUkfYmms4073sTjlKMvwjZDh/jQT4o+GUUEMoiEI5WhD29BjZFSOFQJ+vR/5f4inveD1+djS2FAOFh4faY8+L7JRIOF14ethIWNcLAQxtoYMma5IbrsC65Pk/VwSk6C0YLrwxbCiOCiJbS+GNsHKyuhcKH16Z6l6lKJhAusT/cUKQmRuQewvgO2Cx6W/Gl7YH3YJjjhHj7D6quxPfBy0EIftgV+Tny1z6D6NCymoocr+Qepz8Y2IAbP0gekPrPma104ZiCA+sxKFpBg9wenL8cOHgDm/gumz8T5RhcPSZ+HHTgMrIUbQPo02rghBmMCBkYf8nY1QF4R9GlZPc8J2+gZQF+uwWY/OBaK9a2wAwaGKXslrG9KHfcKU/ZZUJ92+9XEcdXpm84btwVL7xXS52JHKgWWDasC+pxJvXEbCiX6MuwwpaFC39TGKy0YFo549ZlUhsYKQ+/l1Gd6YnkY+pJxPn3GVC/zQZ915tLHfGimaVAfl8Ohzz5hRycd6r3m7PqSd+zgFEA78WXW52u8wR4QyqIDVn3TWBEah7Jql1Hfs9ijHfyx6VtjB6UQqs3mTPomshpJCY0/Fn3TTRKQoRg9M+gzrmhemPPo7I1e34RTLP2MpU6p9Rld+sjPyAuYVt+UE1TDDGb/KPUZcC6GNIqBtSM6fZNbzGWj/8RnGn26nmGojm1fBotCX/4cSYJheupOx/U95YClywex8HRMnz3xvDwDe3Z9zzZPG6b7ChnWd8RusGZ0Tmwf0mfEOV6KecjiD+h7rvQULYu7QXS/vudLsFCS0eibwiYhSYQU+k7YjdQYd1TfPFge4j0Z0YfdQN3JB/U9aXKUgXxIH3bjDMDp12fkcSyKebX79M2DFhoWffqeoYYKgIis78lT89SciPomuVVIChlB3zxgpsbt6pszBQz4j/omcyiBEkJrtifAhzXbE2BpzfYESK3ZHj9v7Tev+Ud4qcZp6ZuXdFlZtWYdsz1WvisnrbnncnJ+afTN9lj5tBt9sz1mfja9WfNzj4tbudq3vrkag5nflXJrTs1z8P9+Qcuom610IW/0nZCbYiDNDVGWsaf0I9KUOVsX7LaYx6XJE1gG3YmoC1Vb30t+xm6PWbSv9b0Om9N54wsDyaO+eW2Xgbv9Wb8Zl2R+BFLxcX/AS5MudaZ5lCYsj3eCttc6vHkfxzDnzr62+4XKeHrnCPPxp/syvZT5o7xuidBclft5SH+eb4mTe1larYIgqKuIfKhVp8bFfu59bEfCT2wAQoGaP+2TNYcoWa9bJFaXOs8pcMl+1V1PZX2yIh6wedqUdeo5Thb0XyR72RyCVVXVwdGwMzp5bprt3xJoR7tWjfOlqLP7LycrO3Nlt4zvHh3JX5Xhi7HnuiZ1eDu0n67quoqznoMk7Ky8/cK2RZgS/siYWkvySQWi+mhI/KT3izNlGYXnfsUr4Fe7P/x7E+B4ZfyPD9AVAQN2iLxyXY16Q7I+/beI8F5s/INkfbrvcjhTnw9ORrI+zReR+8/2okSyPqbe+1YEsZc7jrPOqvqwORH/aBGmnhcFO4AFmqN4eLL1Uf78FmFE6EZ5fGjPXD72VfuPnLQUyfC+CfbbK7L1jR/1vD2QBtwNeVxutu6uzojnsPppuOBKUjLe5dmDdH0vSW///Xyc5HF/RFYXbJ15xzVF6yJf39cvJHxYBXh3d0G6Boqg+Zh1GhRU6w1vIF/aNyr0fWGvs+iLzFs7PrS2B/xstevPB33Dk1rpQZE+5SReUJCnPCXkx0xV3xV7XT8mfgv++S2JSeu74mdVsCtc1918vb2h//n09UnlHyI1begwk2lzAAAAAElFTkSuQmCC")
+    bottom center no-repeat;
+  background-size: contain;
+  content: "";
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0YIqft0gkon2qNNJOBZ4BOQqLqmH6jgK9Qw&s")
+    bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+#start {
+  font-family: "Nunito", sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+  background: #3b1010;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+#start:hover {
+  opacity: 0.8;
+}
